@@ -1,4 +1,5 @@
-import Footer from "@/components/footer";
+import Footer from "@/components/layout/footer";
+import NavigationBar from "@/components/layout/navigationBar";
 
 export default function Layout({
   children,
@@ -7,6 +8,7 @@ export default function Layout({
 }>) {
   return (
     <>
+      <NavigationBar />
       {children}
       <Footer />
     </>
