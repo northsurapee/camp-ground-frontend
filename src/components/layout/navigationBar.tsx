@@ -37,7 +37,9 @@ export default async function NavigationBar() {
       <div className="flex gap-4 justify-center items-center">
         {session ? (
           <>
-            <UserButton>{session.user?.name || "User"}</UserButton>
+            <UserButton isAdmin={session.user?.role == "admin"}>
+              {session.user?.name || "User"}
+            </UserButton>
             <Sidebar myBookings={myBookings} />
           </>
         ) : (
